@@ -11,6 +11,7 @@ When the user is on mobile they should utilize the 'scroll to videos' link for q
 <h1>Screen Shots</h1>
 <p>Desktop View</p>
 <img src='https://raw.githubusercontent.com/AJStolp/Gist-Photos/master/Screen%20Shot%202019-12-27%20at%204.32.53%20PM.png' alt='image of Trip Hive project'>
+<h4>Exploring Parks</h4>
 <img src='https://raw.githubusercontent.com/AJStolp/Gist-Photos/master/Screen%20Shot%202019-12-27%20at%204.54.04%20PM.png' alt='image of trip hive'>
 
 <p> Mobile View</p>
