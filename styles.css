@@ -43,6 +43,9 @@ h1 {
 .inputsAlign {
     text-align: center;
 }
+label {
+    display: none;
+}
 main {
    display: grid;
    grid-template-columns: repeat(1, 1fr);
