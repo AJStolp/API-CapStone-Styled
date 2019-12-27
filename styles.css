@@ -18,6 +18,14 @@ body {
 .anchorScroll:hover {
     color: red;
 }
+#cgp1{
+    color: #52489c;
+    font-family: 'Ubuntu', sans-serif;
+}
+#cgp2 {
+    color: black;
+    font-family: 'Ubuntu', sans-serif;
+}
 #campground-button {
     cursor: pointer;
 }
@@ -34,10 +42,6 @@ h1 {
 }
 .inputsAlign {
     text-align: center;
-}
-.inputsAlign > p {
-    color: #0d78c9;
-    font-family: 'Ubuntu', sans-serif;
 }
 main {
    display: grid;
@@ -77,6 +81,10 @@ main {
 .noAverages {
     display: none;
 }
+#parkInstructions {
+    color: #52489c;
+    font-family: 'Ubuntu', sans-serif;
+}
 ::placeholder {
     color: red;
     font-weight: 1000;
@@ -88,9 +96,7 @@ main {
 section > input {
     text-align: center;
 }
-section > h5 {
-    color: #52489c;
-}
+
 .span1Heading {
     color: #52489c;
 }
@@ -126,6 +132,14 @@ section > h5 {
     background-color: #216554;
     border-radius: 50px 15px;
 }
+#cgp1 {
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+}
+#cgp2{
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+}
 h1 {
     line-height: 2em;
     text-align: center;
@@ -150,13 +164,9 @@ main {
 }
 #parkInstructions {
     color: white;
+    font-family: 'Ubuntu', sans-serif;
 }
-#cgInstructions{
-    color: black;
-    }
-section > h5 {
-    color: white;
-}
+
 }
  @media screen and (prefers-reduced-motion: reduce) {}
   /* .mainSect {
