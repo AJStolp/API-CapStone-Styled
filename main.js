@@ -146,10 +146,7 @@ function topFunction() {
     document.documentElement.scrollTop = 0; 
 } 
 
-document.querySelector('#getMeThere').scrollIntoView({ 
-    behavior: 'smooth' 
-  });
-
+//POSSIBLE FEATURES TO BE ADDED LATER
 
 // function displayNationalEventsData(responseJsonEvents){
 //     console.log(responseJsonEvents);
