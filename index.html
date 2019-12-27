@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <link rel='stylesheet' href='styles.css'>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu%7CYanone+Kaffeesatz&display=swap" rel="stylesheet"> 
+    <title>Travel</title>
+</head>
+<body>
+    <h1><span class='span1Heading'>Welcome!</span> Below, you can search for Campgrounds. Then, you can search for videos of that Park for your next adventure!</h1>
+<div class='gridInput'>
+    <section class='inputYT aligns inputsAlign'>
+        <p>Please use State Abbreviation's separated by a comma with no space for multiple listings</p>
+        <h5>States with large numbers of parks such as California may take a few seconds to populate</h5>
+    <div class='inputsAlign'>
+        <input type='text' id='submitNational' placeholder='State Abbreviation&#8217s'>
+        <input type ='submit' id='campground-button' value='Get Campgrounds!'>
+    </div>
+    </section><br>
+    <section class='inputYT startEnd aligns inputsAlign'>
+        <p id='parkInstructions'>You can search for videos of the National Parks that you would like to visit</p>
+        <input type='text' id='youTube' placeholder='YouTube Search'>
+        <input type='submit' id='submitVideos' value='Get Videos!'><br><br>
+        <a href='#scrollToVideos' class='anchorScroll'>Scroll To Videos</a>
+    </section>
+</div>
+    
+    
+<main role='main'>
+    <section class='displayNational mainSect shadow'></section>
+    <section class='displayYouTube mainSect shadow' id='scrollToVideos'></section>
+    <section>
+        <p class='displayError clear'></p>
+    </section>   
+        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="main.js"></script>
+    </main>
+</body>
+</html>
