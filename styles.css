@@ -123,6 +123,8 @@ section > h5 {
     margin: 10px 10px;
     width: 95%;
     padding-bottom: 25px;
+    background-color: #216554;
+    border-radius: 50px 15px;
 }
 h1 {
     line-height: 2em;
@@ -147,12 +149,14 @@ main {
     object-fit: cover;
 }
 #parkInstructions {
-    color: #52489c;
+    color: white;
 }
-section > p {
+#cgInstructions{
     color: black;
-    text-transform: initial;
     }
+section > h5 {
+    color: white;
+}
 }
  @media screen and (prefers-reduced-motion: reduce) {}
   /* .mainSect {
