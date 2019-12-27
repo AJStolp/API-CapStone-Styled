@@ -75,7 +75,7 @@ section > input {
 h1 {
     line-height: 1.5em;
     font-family: 'Yanone Kaffeesatz', sans-serif;
-    
+    text-align: left;
 }
 .startEnd {
     grid-column: 2/3;
@@ -150,6 +150,7 @@ section > h5 {
     }
     h1{
         line-height: 2em;
+        text-align: center;
     }
     section > p {
         color: black;
