@@ -7,19 +7,6 @@ html {
 body {
     background-color: #ebebeb;
 }
-.scrollToSection {
-    position: sticky;
-    top: 10px;
-}
-#getMeThere {
-    text-align: center;
-}
-#campground-button {
-    cursor: pointer;
-}
-#submitVideos {
-    cursor: pointer;
-}
 .anchorScroll {
     color: #0d78c9;
     text-decoration: none;
@@ -31,22 +18,42 @@ body {
 .anchorScroll:hover {
     color: red;
 }
-.inputsAlign > p {
-    color: #0d78c9;
-    font-family: 'Ubuntu', sans-serif;
-}
-section > input {
-    text-align: center;
-}
-::placeholder {
-    color: red;
-    font-weight: 1000;
+#campground-button {
+    cursor: pointer;
 }
 .errorMessage {
     color: red;
 }
+#getMeThere {
+    text-align: center;
+}
+h1 {
+    line-height: 1.5em;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    text-align: left;
+}
 .inputsAlign {
     text-align: center;
+}
+.inputsAlign > p {
+    color: #0d78c9;
+    font-family: 'Ubuntu', sans-serif;
+}
+main {
+   display: grid;
+   grid-template-columns: repeat(1, 1fr);
+   grid-row-gap: 3rem;
+   line-height: 1.5rem;
+   padding-top: 50px;
+   margin: 10px 10px;
+   width: 95%;
+   padding-bottom: 25px;
+}
+.mainSect {
+   padding: 50px 10px 0 10px;
+   margin-top: 0;
+   font-family: 'lato', sans-serif;
+   text-align: center;
 }
 #myBtn {
     display: none; 
@@ -62,101 +69,91 @@ section > input {
     padding: 15px; 
     border-radius: 10px; 
     font-size: 18px; 
-  }
+}
 
 #myBtn:hover {
     background-color: #555; /* Add a dark-grey background on hover */
-  }
-  
-.noAverages {
-      display: none;
 }
-
-h1 {
-    line-height: 1.5em;
-    font-family: 'Yanone Kaffeesatz', sans-serif;
-    text-align: left;
+.noAverages {
+    display: none;
+}
+::placeholder {
+    color: red;
+    font-weight: 1000;
+}
+.scrollToSection {
+    position: sticky;
+    top: 10px;
+}
+section > input {
+    text-align: center;
+}
+section > h5 {
+    color: #52489c;
+}
+.span1Heading {
+    color: #52489c;
 }
 .startEnd {
     grid-column: 2/3;
     grid-row: 1/2;
 }
-
-.span1Heading {
-    color: #52489c;
-}
-section > h5 {
-    color: #52489c;
+#submitVideos {
+    cursor: pointer;
 }
 
- main {
+/*MEDIA QUERIES*/
+
+@media(min-width: 48em){
+.anchorScroll {
+    display: none;
+}
+.aligns {
+    text-align: center;
+}
+#getMeThere {
+    text-align: right;
+}
+.gridInput {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-row-gap: 3rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 3.5rem;
     line-height: 1.5rem;
     padding-top: 50px;
     margin: 10px 10px;
     width: 95%;
     padding-bottom: 25px;
- }
- .mainSect {
+}
+h1 {
+    line-height: 2em;
+    text-align: center;
+}
+.inputTY{
     padding: 50px 10px 0 10px;
     margin-top: 0;
     font-family: 'lato', sans-serif;
     text-align: center;
- }
-
- @media(min-width: 48em){
-     .anchorScroll {
-         display: none;
-     }
-     #parkInstructions {
-         color: #52489c;
-     }
-     #getMeThere {
-         text-align: right;
-     }
-    .aligns {
-        text-align: center;
+}
+main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    line-height: 1.5rem;
+    padding-top: 100px;
+    margin: 0 20px;
+    width: 95%;
+}
+.mainSect {
+    object-fit: cover;
+}
+#parkInstructions {
+    color: #52489c;
+}
+section > p {
+    color: black;
+    text-transform: initial;
     }
-    main {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 2rem;
-        line-height: 1.5rem;
-        padding-top: 100px;
-        margin: 0 20px;
-        width: 95%;
-    }
-    .mainSect {
-        /* box-shadow:0 0 20px rgba(0,0,0,0.8); */
-        object-fit: cover;
-      }
-      .gridInput {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-row-gap: 3.5rem;
-        line-height: 1.5rem;
-        padding-top: 50px;
-        margin: 10px 10px;
-        width: 95%;
-        padding-bottom: 25px;
-    }
-    .inputTY{
-        padding: 50px 10px 0 10px;
-        margin-top: 0;
-        font-family: 'lato', sans-serif;
-        text-align: center;
-    }
-    h1{
-        line-height: 2em;
-        text-align: center;
-    }
-    section > p {
-        color: black;
-        text-transform: initial;
-    }
- }
+}
  @media screen and (prefers-reduced-motion: reduce) {}
   /* .mainSect {
      opacity: 0;
