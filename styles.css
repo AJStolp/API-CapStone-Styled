@@ -91,6 +91,8 @@ main {
 ::placeholder {
     color: red;
     font-weight: 1000;
+    font-family: 'Ubuntu', sans-serif;
+    letter-spacing: 1px;
 }
 .scrollToSection {
     position: sticky;
