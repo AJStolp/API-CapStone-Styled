@@ -88,7 +88,7 @@ function displayNationalParksData(responseJsonNational) {
                 let total = '0';
                 for(let i = 0; i < values.length; i++){
                     if(total === values[i]){
-                        $('.displayError').html('Sorry but the State Abbrevation you entered doesn&#39;t exist - please try again')
+                        $('.displayError').html('Sorry but the State Abbrevation(s) you entered doesn&#39;t exist - please try again')
                     }
                 }
 }
@@ -102,7 +102,7 @@ function submitForm() {
         let campgroundLocation = $('#submitNational').val();
         acquireDataNationalParksCG(campgroundLocation);
         $('.displayNational').empty()
-        
+        $('.displayError').empty()
     })
     $('#submitVideos').on('click', function(e){
         e.preventDefault();
