@@ -6,15 +6,16 @@ let apiKey = '9QyndIrmU1OY2fFCidHVeWDuZDfSMZ9Ac6VZ8ei7';
 //Above is for national parks data
  
 //YouTube
-let googleApi = 'AIzaSyA-NIJU320_1cpKM6em5K1nfFhQjMN8GOU';
+let googleApi = 'AIzaSyCAwHSlOJVcvcTe5CKnoa-G-1xKozrlbSQ';
 let googleUrl = 'https://www.googleapis.com/youtube/v3/search';
 
+//API Fetch for YouTube Data
 function getYouTubeData(origins){
     const paramsGoogle = {
         key: googleApi,
         q: origins,
         part: 'snippet',
-        maxResults: 25,
+        maxResults: 15,
     }
 
     let queryStringGoogle = formatParams(paramsGoogle);
@@ -40,13 +41,14 @@ function displayYouTubeData(responseJsonGoogle){
     }
 }
 
+//This function formats the parameters for API call
 function formatParams(params) {
     const queryItems = Object.keys(params)
     .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(params[key])}`)
         return queryItems.join('&');
 }
 
-
+//API Fetch for National Parks
 function acquireDataNationalParksCG(campgroundLocation) {
     const paramsNational = {
         api_key: apiKey,
@@ -66,24 +68,6 @@ function acquireDataNationalParksCG(campgroundLocation) {
             })
 }
 
-// function acquireEventsData(campgroundLocation){
-//     const paramEvents = {
-//         api_key: apiKey,
-//         stateCode: campgroundLocation
-//     }
-
-//     let queryStringEvents = formatParams(paramEvents);
-//     let newNationalEventsUrl = nationalEvents + '?' + queryStringEvents;
-
-
-//     fetch 
-//         (newNationalEventsUrl)
-//             .then(response => response.json())
-//             .then(responseJsonEvents => displayNationalEventsData(responseJsonEvents))
-//             .catch(error => {
-//                 $('.displayError').html(`Sorry, but there were some issues behind the scenes. Please wait and try again:::: ${error.message}`)
-//             })
-// }
 
 function displayNationalParksData(responseJsonNational) {
     // console.log(responseJsonNational);
@@ -99,16 +83,21 @@ function displayNationalParksData(responseJsonNational) {
         <p>${responseJsonNational.data[i].accessibility.firestovepolicy}</p>
         <p><a href="${responseJsonNational.data[i].regulationsurl}" target="_blank">Camping Regulations</a></p><hr>`)
     }
+    let values = Object.values(responseJsonNational);
+                console.log(values);
+                let total = '0';
+                for(let i = 0; i < values.length; i++){
+                    if(total === values[i]){
+                        $('.displayError').html('Sorry but the State Abbrevation you entered doesn&#39;t exist - please try again')
+                    }
+                }
 }
+
+    
+
 
 
 function submitForm() {
-    $('#submitzWeather').on('click', function(e){
-        e.preventDefault();
-        let location = $('#location').val();
-        acquireDataWeather(location);
-        $('.clear').empty();
-    })
     $('#campground-button').on('click', function(e){
         let campgroundLocation = $('#submitNational').val();
         acquireDataNationalParksCG(campgroundLocation);
@@ -122,7 +111,7 @@ function submitForm() {
         $('.displayYouTube').empty();
     })
 }
-submitForm();
+$(submitForm);
 
 
 
@@ -145,42 +134,3 @@ function topFunction() {
     document.body.scrollTop = 0; 
     document.documentElement.scrollTop = 0; 
 } 
-
-//POSSIBLE FEATURES TO BE ADDED LATER
-
-// function displayNationalEventsData(responseJsonEvents){
-//     console.log(responseJsonEvents);
-//     for(let i = 0; i < responseJsonEvents.data.length; i++) {
-//         $('.displayParkEvents').append(`
-//         <h4>${responseJsonEvents.data[i].location}</h4>
-//         <p>${responseJsonEvents.data[i].description}</p>`)
-//     }
-// }
-// function addBackground(){
-//     $(window).on('scroll', function(){
-//         $('.gridInput').addClass('gridInputs');
-//     })
-// }
-//  addBackground();
-// function scrollFade() {
-//     $(document).on('scroll', function(){
-//         let pageTop = $(document).scrollTop();
-//         let pageBottom = $(window).height();
-        
-//         let tags = $('.mainSect')
-
-//         for(let i = 0; i < tags.length; i++) {
-//             let tag = tags[i]
-            
-//             if($(tag).position().top < pageBottom){
-//                 $(tag).addClass('visible')
-//             } else {
-//                 $(tag).removeClass('visible')
-//             }
-//         }
-//     })
-// }
-
-
-
-// scrollFade();

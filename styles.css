@@ -89,9 +89,9 @@ main {
     font-family: 'Ubuntu', sans-serif;
 }
 ::placeholder {
-    color: red;
-    font-weight: 1000;
-    font-family: 'Ubuntu', sans-serif;
+    color: black;
+    font-weight: bold;
+    font-family: 'lato', sans-serif;
     letter-spacing: 1px;
 }
 .scrollToSection {
