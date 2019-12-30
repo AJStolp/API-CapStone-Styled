@@ -36,7 +36,7 @@ function displayYouTubeData(responseJsonGoogle){
     for(let i = 0; i < responseJsonGoogle.items.length; i++){
         let youTubeSearch = responseJsonGoogle.items[i].id.videoId;
         $('.displayYouTube').append(`
-        <iframe src="https://www.youtube.com/embed/${youTubeSearch}"/>
+        <iframe class='videoFrame' src="https://www.youtube.com/embed/${youTubeSearch}"/>
         <p>${responseJsonGoogle.items[i].snippet.title}</p><hr>`)
     }
 }
@@ -88,7 +88,7 @@ function displayNationalParksData(responseJsonNational) {
                 let total = '0';
                 for(let i = 0; i < values.length; i++){
                     if(total === values[i]){
-                        $('.displayError').html('Sorry but the State Abbrevation(s) you entered doesn&#39;t exist - please try again')
+                        $('.displayError').html('Sorry but the State Abbrevation(s) you entered do not exist - please try again')
                     }
                 }
 }
