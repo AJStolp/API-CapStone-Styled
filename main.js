@@ -99,8 +99,8 @@ function submitForm() {
     $('#campground-button').on('click', function(e){
         let campgroundLocation = $('#submitNational').val();
         acquireDataNationalParksCG(campgroundLocation);
-        $('.displayNational').empty()
-        $('.displayError').empty()
+        $('.displayNational').empty();
+        $('.displayError').empty();
     })
     $('#submitVideos').on('click', function(e){
         e.preventDefault();
