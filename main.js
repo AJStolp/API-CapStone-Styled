@@ -91,15 +91,11 @@ function displayNationalParksData(responseJsonNational) {
     }
 }
 
-    
-
-
-
 function submitForm() {
     $('#campground-button').on('click', function(e){
         let campgroundLocation = $('#submitNational').val();
         acquireDataNationalParksCG(campgroundLocation);
-        $('.displayNational').empty();
+        // $('.displayNational').empty();
         $('.displayError').empty();
     })
     $('#submitVideos').on('click', function(e){
@@ -110,6 +106,7 @@ function submitForm() {
     })
 }
 $(submitForm);
+
 
 
 
