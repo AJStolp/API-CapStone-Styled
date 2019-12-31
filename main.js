@@ -1,7 +1,6 @@
 'use strict';
 
 let nationalUrl = 'https://developer.nps.gov/api/v1/campgrounds';
-let nationalEvents = 'https://developer.nps.gov/api/v1/events'
 let apiKey = 'Sm8D9Px0mS0Caf9Cya2YNGsnTWAg6gexaEEKX6ab';
 //Above is for national parks data
  
@@ -83,14 +82,7 @@ function displayNationalParksData(responseJsonNational) {
         <p>${responseJsonNational.data[i].accessibility.firestovepolicy}</p>
         <p><a href="${responseJsonNational.data[i].regulationsurl}" target="_blank">Camping Regulations</a></p><hr>`)
     }
-    let values = Object.values(responseJsonNational);
-                console.log(values);
-                let total = '0';
-                for(let i = 0; i < values.length; i++){
-                    if(total === values[i]){
-                        $('.displayError').html('Sorry but the State Abbrevation(s) you entered do not exist - please try again')
-                    }
-                }
+   
 }
 
     
