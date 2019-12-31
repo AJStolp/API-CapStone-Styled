@@ -7,6 +7,9 @@ html {
 body {
     background-color: #ebebeb;
 }
+legend {
+    display: none;
+}
 .anchorScroll {
     color: #0d78c9;
     text-decoration: none;
@@ -184,7 +187,6 @@ main {
     transform: translate(0, 20px);
     transition: all 3s;
   }
-
   .mainSect.visible {
       opacity: 1;
       transform: translate(0, 0) 

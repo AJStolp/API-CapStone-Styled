@@ -2,7 +2,7 @@
 
 let nationalUrl = 'https://developer.nps.gov/api/v1/campgrounds';
 let nationalEvents = 'https://developer.nps.gov/api/v1/events'
-let apiKey = '9QyndIrmU1OY2fFCidHVeWDuZDfSMZ9Ac6VZ8ei7';
+let apiKey = 'Sm8D9Px0mS0Caf9Cya2YNGsnTWAg6gexaEEKX6ab';
 //Above is for national parks data
  
 //YouTube
