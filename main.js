@@ -1,7 +1,8 @@
 'use strict';
 
 let nationalUrl = 'https://www.developer.nps.gov/api/v1/campgrounds';
-let apiKey = 'Sm8D9Px0mS0Caf9Cya2YNGsnTWAg6gexaEEKX6ab';
+// let apiKey = 'Sm8D9Px0mS0Caf9Cya2YNGsnTWAg6gexaEEKX6ab';
+let apiKey = "ghVZTjFJF6RX2Hr1K5Gij7ZdMgwEvBOygfQZzEzB";
 //Above is for national parks data
  
 //YouTube
@@ -56,7 +57,7 @@ function acquireDataNationalParksCG(campgroundLocation) {
 
     let queryString = formatParams(paramsNational);
     let newNationalUrl = nationalUrl + '?' + queryString;
-
+    console.log('working here');
 
     fetch 
         (newNationalUrl)
@@ -93,9 +94,10 @@ function displayNationalParksData(responseJsonNational) {
 
 function submitForm() {
     $('#campground-button').on('click', function(e){
+        e.preventDefault();
         let campgroundLocation = $('#submitNational').val();
         acquireDataNationalParksCG(campgroundLocation);
-        // $('.displayNational').empty();
+        $('.displayNational').empty();
         $('.displayError').empty();
     })
     $('#submitVideos').on('click', function(e){
