@@ -1,8 +1,7 @@
 'use strict';
 
-let nationalUrl = 'https://www.developer.nps.gov/api/v1/campgrounds';
-// let apiKey = 'Sm8D9Px0mS0Caf9Cya2YNGsnTWAg6gexaEEKX6ab';
-let apiKey = "ghVZTjFJF6RX2Hr1K5Gij7ZdMgwEvBOygfQZzEzB";
+let nationalUrl = 'https://developer.nps.gov/api/v1/campgrounds';
+let apiKey = 'Sm8D9Px0mS0Caf9Cya2YNGsnTWAg6gexaEEKX6ab';
 //Above is for national parks data
  
 //YouTube
